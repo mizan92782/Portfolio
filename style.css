@@ -132,7 +132,7 @@ header nav a:hover {
   height: 4px; /* Thickness of the line */
   background-color: #007BFF; /* Set the color of the line */
   margin-right: 10px;
-  box-shadow: 0 0 20px 1px #007BFF;/* Vertically align the text with the line */
+  box-shadow: 0 0 20px 4px #007BFF;/* Vertically align the text with the line */
    /* Add spacing between the line and the text */
 }
 
