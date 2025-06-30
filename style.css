@@ -127,12 +127,23 @@ header nav a:hover {
 }
 
 .spaceline::before {
+  padding-right: 5px;
   content: ''; /* Add an empty pseudo-element for the line */
   flex: .3; /* Make the line take up remaining space */
   height: 4px; /* Thickness of the line */
   background-color: #007BFF; /* Set the color of the line */
   margin-right: 10px;
-  box-shadow: 0 0 20px 4px #007BFF;/* Vertically align the text with the line */
+  box-shadow: 0 0 20px 2px #007BFF;/* Vertically align the text with the line */
+   /* Add spacing between the line and the text */
+}
+.spaceline::after {
+  padding-left: 5 px;
+  content: ''; /* Add an empty pseudo-element for the line */
+  flex: .05; /* Make the line take up remaining space */
+  height: 4px; /* Thickness of the line */
+  background-color: #007BFF; /* Set the color of the line */
+  margin-right: 10px;
+  box-shadow: 0 0 20px 2px #007BFF;/* Vertically align the text with the line */
    /* Add spacing between the line and the text */
 }
 
