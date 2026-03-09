@@ -10,6 +10,26 @@
 </head>
 
 <body>
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="Toggle theme">
+    <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
 
 
 
@@ -43,31 +63,35 @@
     <canvas id="particles"></canvas>
     <div class="hero-content">
       <div class="hero-text">
-        <div class="typing-container">
-          <h1 class="hero-title">Hi, I'm <span class="highlight typing-text"></span></h1>
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">backend-dev@portfolio:~</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="output"><span class="highlight typing-text"></span></p>
+            <p><span class="prompt">$</span> cat role.txt</p>
+            <p class="output">Software Engineer | Backend Developer | Python Specialist</p>
+            <p><span class="prompt">$</span> echo $SKILLS</p>
+            <p class="output">Building scalable, secure, and high-performance web applications</p>
+            <p><span class="prompt blinking">$</span><span class="cursor-blink">_</span></p>
+          </div>
         </div>
-        <p class="hero-subtitle">Software Engineer | Backend Developer | Python Specialist</p>
-        <p class="hero-description">Building scalable, secure, and high-performance web applications</p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">
-            <span>View Projects</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+            <span>$ ls projects/</span>
           </a>
           <a href="docs/Resume(Mizanur Rahman).pdf" class="btn btn-secondary" target="_blank">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-            </svg>
-            <span>Download Resume</span>
+            <span>$ cat resume.pdf</span>
           </a>
         </div>
       </div>
       <div class="hero-image">
-        <div class="profile-wrapper">
-          <div class="profile-ring"></div>
-          <div class="profile-ring-2"></div>
-          <img src="images/profile.jpg" alt="Mizanur Rahman" class="profile-img">
+        <div class="profile-container">
+          <img src="images/profile.jpg" alt="Mizanur Rahman" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Mizanur+Rahman&size=400&background=0d1117&color=00d4ff&bold=true'">
         </div>
       </div>
     </div>
@@ -79,29 +103,40 @@
   <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
-      <h2 class="section-title" data-text="About Me">About Me</h2>
-      <div class="about-content">
-        <div class="about-card">
-          <div class="card-icon">💻</div>
-          <h3>Clean Code</h3>
-          <p>Writing maintainable, scalable, and efficient code following best practices</p>
+      <h2 class="section-title" data-text="Md Mizanur Rahman/about/~"><span class="code-comment">Md Mizanur Rahman/about/~</span></h2>
+      <div class="api-flow">
+        <div class="flow-step">
+          <div class="flow-icon">📥</div>
+          <h3>Request</h3>
+          <p>Client sends HTTP request</p>
+          <code>POST /api/v1/data</code>
         </div>
-        <div class="about-card">
-          <div class="card-icon">🚀</div>
-          <h3>Performance</h3>
-          <p>Optimizing applications for speed, reliability, and user experience</p>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">⚙️</div>
+          <h3>Process</h3>
+          <p>Backend logic & validation</p>
+          <code>validate() → process()</code>
         </div>
-        <div class="about-card">
-          <div class="card-icon">🔒</div>
-          <h3>Security</h3>
-          <p>Implementing robust security measures to protect data and systems</p>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">📤</div>
+          <h3>Response</h3>
+          <p>Return JSON response</p>
+          <code>{"status": 200}</code>
         </div>
       </div>
-      <p class="about-text">
-        Passionate Backend Developer with expertise in Django and Python, specializing in building scalable and secure web
-        applications. Focused on clean code, modular architecture, and high-performance solutions, delivering reliable and
-        maintainable backend systems.
-      </p>
+      <div class="code-snippet">
+        <pre><code><span class="code-comment"># Backend Developer Philosophy</span>
+<span class="code-keyword">def</span> <span class="code-function">my_approach</span>():
+    principles = [
+        <span class="code-string">"Clean, maintainable code"</span>,
+        <span class="code-string">"Scalable architecture"</span>,
+        <span class="code-string">"Security-first mindset"</span>,
+        <span class="code-string">"Performance optimization"</span>
+    ]
+    <span class="code-keyword">return</span> principles</code></pre>
+      </div>
       <div class="social-links">
         <a href="https://github.com/yourusername" target="_blank" class="social-link" aria-label="GitHub">
           <img src="images/github_icon.png" alt="GitHub">
@@ -120,8 +155,8 @@
   <!-- Skills Section -->
   <section id="skills" class="skills">
     <div class="container">
-      <h2 class="section-title" data-text="Technical Skills">Technical Skills</h2>
-      <p class="section-subtitle">Technologies I work with</p>
+      <h2 class="section-title" data-text="Md Mizanur Rahman/skills/~"><span class="code-comment">Md Mizanur Rahman/skills/~</span></h2>
+      <p class="section-subtitle"><span class="prompt">$</span> cat /etc/skills.conf</p>
 
     <div class="skills-row">
 
@@ -269,8 +304,8 @@
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <div class="container">
-      <h2 class="section-title" data-text="Featured Projects">Featured Projects</h2>
-      <p class="section-subtitle">Some of my recent work</p>
+      <h2 class="section-title" data-text="Md Mizanur Rahman/projects/~"><span class="code-comment">Md Mizanur Rahman/projects/~</span></h2>
+      <p class="section-subtitle"><span class="prompt">$</span> ls -la ./projects</p>
       <div class="project-grid">
         <div class="project-card">
           <div class="project-header">
@@ -320,8 +355,8 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2 class="section-title" data-text="Get In Touch">Get In Touch</h2>
-      <p class="contact-text">I'm always open to discussing new projects and opportunities.</p>
+      <h2 class="section-title" data-text="Md Mizanur Rahman/contact/~"><span class="code-comment">Md Mizanur Rahman/contact/~</span></h2>
+      <p class="contact-text"><span class="prompt">$</span> echo "Let's connect and build something amazing!"</p>
       <div class="contact-grid">
         <div class="contact-card">
           <div class="contact-icon">

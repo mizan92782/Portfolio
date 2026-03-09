@@ -1,3 +1,23 @@
+// Progress Bar
+const progressBar = document.querySelector('.progress-bar');
+window.addEventListener('scroll', () => {
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  progressBar.style.width = scrolled + '%';
+});
+
+// Theme Toggle
+const themeToggle = document.querySelector('.theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+  });
+
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+  }
+}
+
 // Particle animation
 const canvas = document.getElementById('particles');
 if (canvas) {
@@ -73,7 +93,7 @@ if (canvas) {
   });
 }
 
-// Typing animation
+// Typing animation for terminal
 const typingText = document.querySelector('.typing-text');
 if (typingText) {
   const text = 'Mizanur Rahman';
@@ -83,11 +103,11 @@ if (typingText) {
     if (index < text.length) {
       typingText.textContent = text.slice(0, index + 1);
       index++;
-      setTimeout(type, 150);
+      setTimeout(type, 100);
     }
   }
 
-  setTimeout(type, 500);
+  setTimeout(type, 1000);
 }
 
 // Mobile menu toggle
