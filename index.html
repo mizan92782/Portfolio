@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mizan's Portfolio</title>
+  <title>Mizanur Rahman | Software Engineer</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,50 +14,67 @@
 
 
   <!-- Header -->
-  <header>
-    <div class="logo">Mizan.Portfolio</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+  <header class="header">
+    <div class="logo">MR</div>
+    <nav class="nav">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
-  <!-- Profile Section -->
-  <section id="about" class="profile-about">
-    <div class="profile">
-      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img">
-      <h1>Mizanur Rahman</h1>
-      <p class="typing">Backend Based Full-Stack Developer | Python Developer | Programmer</p>
-      <a href="docs/Resume(Mizanur Rahman).pdf" class="resume-btn" target="_blank">Download Resume</a>
+  <nav class="mobile-menu">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Mizanur Rahman</span></h1>
+        <p class="hero-subtitle">Software Engineer | Backend Developer | Python Specialist</p>
+        <p class="hero-description">Building scalable, secure, and high-performance web applications</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="docs/Resume(Mizanur Rahman).pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/profile.jpg" alt="Mizanur Rahman" class="profile-img">
+      </div>
     </div>
-
-
-    </div>
-
   </section>
 
-
-
-  <div class="about">
-    <h2>About Me</h2>
-    <p id="about-typing">
-      Passionate Backend Developer with expertise in Django and Python, specializing in building scalable and secure web
-      applications. Focused on clean code, modular architecture, and high-performance solutions, delivering reliable and
-      maintainable backend systems.
-    </p>
-
-    <div class="social-links-bottom">
-      <a href="https://github.com/yourusername" target="_blank" class="social-link">
-        <img src="images/github_icon.png" alt="GitHub Logo" class="social-logo">
-      </a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
-        <img src="images/linkdin_icon.png" alt="LinkedIn Logo" class="social-logo">
-      </a>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        Passionate Backend Developer with expertise in Django and Python, specializing in building scalable and secure web
+        applications. Focused on clean code, modular architecture, and high-performance solutions, delivering reliable and
+        maintainable backend systems.
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/yourusername" target="_blank" class="social-link" aria-label="GitHub">
+          <img src="images/github_icon.png" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link" aria-label="LinkedIn">
+          <img src="images/linkdin_icon.png" alt="LinkedIn">
+        </a>
+      </div>
     </div>
-
-  </div>
+  </section>
 
 
 
@@ -65,7 +82,8 @@
 
   <!-- Skills Section -->
   <section id="skills" class="skills">
-    <h2>Skills</h2>
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
 
     <div class="skills-row">
 
@@ -202,7 +220,7 @@
         </div>
       </div>
     </div>
-
+    </div>
   </section>
 
 
@@ -212,42 +230,78 @@
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-box">
-        <h3>Project 1</h3>
-        <p>A modern web app with real-time features and responsive UI.</p>
-        <a href="https://github.com/yourusername/project1" target="_blank" class="project-link">GitHub Repo</a>
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Django E-Commerce Platform</h3>
+            <span class="project-tag">Backend</span>
+          </div>
+          <p>Scalable e-commerce solution with REST APIs, payment integration, and admin dashboard.</p>
+          <div class="project-tech">
+            <span>Django</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+          </div>
+          <a href="project-details.html?project=ecommerce" class="project-link">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Flutter Mobile App</h3>
+            <span class="project-tag">Mobile</span>
+          </div>
+          <p>Cross-platform mobile application with real-time data synchronization and offline support.</p>
+          <div class="project-tech">
+            <span>Flutter</span>
+            <span>Firebase</span>
+            <span>Dart</span>
+          </div>
+          <a href="project-details.html?project=flutter-app" class="project-link">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>REST API Service</h3>
+            <span class="project-tag">API</span>
+          </div>
+          <p>High-performance RESTful API with authentication, rate limiting, and comprehensive documentation.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Django REST</span>
+            <span>Redis</span>
+          </div>
+          <a href="project-details.html?project=rest-api" class="project-link">View Project →</a>
+        </div>
       </div>
-
-
-
-      <div class="project-box">
-        <h3>Project 2</h3>
-        <p>A cross-platform mobile app built using Flutter.</p>
-        <a href="https://github.com/yourusername/project2" target="_blank" class="project-link">GitHub Repo</a>
-      </div>
-
-
-      <div class="project-box">
-        <h3>Project 2</h3>
-        <p>A cross-platform mobile app built using Flutter.</p>
-        <a href="https://github.com/yourusername/project2" target="_blank" class="project-link">GitHub Repo</a>
-      </div>
-
-
-
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <h2> Contact Me</h2>
-    <p>&copy;Mizanur rahman</p>
-    <p>E-mail : mizanmd92782@gmail.com
-    <p>Phone: +880 1891671904</p>
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-text">I'm always open to discussing new projects and opportunities.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:mizanmd92782@gmail.com">mizanmd92782@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+8801891671904">+880 1891671904</a>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Mizanur Rahman. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
