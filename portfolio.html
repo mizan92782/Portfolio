@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mizanur Rahman — Full Stack Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-f" id="cursorF"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="nav-brand">Mizanur <span>Rahman</span></a>
+      <div class="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="resume.pdf" download class="nav-cta"><i class="fas fa-download"></i> Resume</a>
+      <div class="ham" id="ham" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+    <div class="mob-menu" id="mobMenu">
+      <a href="#hero" class="nav-link" onclick="closeMenu()">Home</a>
+      <a href="#about" class="nav-link" onclick="closeMenu()">About</a>
+      <a href="#experience" class="nav-link" onclick="closeMenu()">Experience</a>
+      <a href="#skills" class="nav-link" onclick="closeMenu()">Skills</a>
+      <a href="#projects" class="nav-link" onclick="closeMenu()">Projects</a>
+      <a href="#education" class="nav-link" onclick="closeMenu()">Education</a>
+      <a href="#contact" class="nav-link" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <main class="main">
+      <!-- ═══ HERO ═══ -->
+      <section id="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-tag">Available for opportunities</div>
+            <h1 class="hero-title">
+              Hi, I'm<br /><span class="ac">Mizanur</span><br />Rahman
+            </h1>
+            <p class="hero-sub">
+              <span id="typed"></span><span class="cblink"></span>
+            </p>
+            <p class="hero-desc">
+              Backend Developer with 1+ year of experience building scalable and
+              high-performance APIs using Django REST Framework and FastAPI.
+              Strong background in competitive programming with solid skills in
+              data structures and algorithms, enabling efficient problem-solving
+              and optimized solutions. Focused on backend system design, writing
+              clean, maintainable code, and developing reliable architectures to
+              handle real-world applications.
+            </p>
+            <div class="hero-btns">
+              <a href="#contact" class="btn-g"><i class="fas fa-paper-plane"></i> Hire Me</a>
+              <a href="resume.pdf" download class="btn-ghost"><i class="fas fa-download"></i> Download CV</a>
+            </div>
+            <div class="hero-socials">
+              <a href="https://github.com/mian91782" target="_blank" class="h-soc" title="GitHub"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/in/mizanurrahman" target="_blank" class="h-soc" title="LinkedIn"><i
+                  class="fab fa-linkedin-in"></i></a>
+              <a href="https://wa.me/8801891671904" target="_blank" class="h-soc" title="WhatsApp"><i
+                  class="fab fa-whatsapp"></i></a>
+              <a href="https://t.me/mizan92782" target="_blank" class="h-soc" title="Telegram"><i
+                  class="fab fa-telegram-plane"></i></a>
+              <a href="mailto:mizanmd92782@gmail.com" class="h-soc" title="Email"><i class="fas fa-envelope"></i></a>
+
+              <br />
+              <a href="https://t.me/mizan92782" target="_blank" class="h-soc" title="Telegram"><i
+                  class="fab fa-leetcode"></i></a>
+              <a href="https://t.me/mizan92782" target="_blank" class="h-soc" title="Telegram"><i
+                  class="fab fa-telegram-geekforgeeks"></i></a>
+              <a href="https://t.me/mizan92782" target="_blank" class="h-soc" title="Telegram"><i
+                  class="fab fa-codeforces"></i></a>
+            </div>
+          </div>
+
+          <!-- PROFILE PHOTO -->
+          <div class="hero-photo-col">
+            <div class="profile-frame">
+              <div class="p-ring">
+                <div class="p-ring-in"></div>
+              </div>
+              <div class="p-img" onclick="document.getElementById('photo-in').click()"
+                title="Click to upload your photo">
+                <img id="profile-photo" alt="Profile" src="profile.jpg" onload="
+                    this.classList.add('show');
+                    document.getElementById('ph-placeholder').style.display =
+                      'none';
+                  " />
+                <div class="p-placeholder" id="ph-placeholder">
+                  <i class="fas fa-camera-retro"></i>
+                  <p>
+                    <strong>Upload Your Photo</strong>Click to add your<br />profile
+                    picture
+                  </p>
+                </div>
+              </div>
+              <input type="file" id="photo-in" accept="image/*" onchange="loadPhoto(this)" />
+            </div>
+            <div class="fbadge"><strong>1+</strong>Years Exp.</div>
+            <div class="fbadge"><strong>Backend</strong>Develoer</div>
+          </div>
+        </div>
+        <div class="scroll-hint">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <div class="gdiv"></div>
+
+      <!-- ═══ ABOUT ═══ -->
+      <section id="about">
+        <div style="width: 100%">
+          <p class="slabel reveal">// 01 — About Me</p>
+          <h2 class="stitle reveal">Who <span class="ac">I Am</span></h2>
+          <div class="sbar eveal"></div>
+          <div class="about-grid">
+            <div class="rl">
+              <div class="about-text">
+                <p>
+                  I'm a <span class="hi">Full Stack Developer</span> based in
+                  Dhaka, Bangladesh, specializing in building exceptional
+                  digital experiences. I enjoy crafting things that live on the
+                  internet — whether websites, apps, or anything in between.
+                </p>
+                <p>
+                  My focus is on building accessible, high-performance products
+                  and digital experiences. I'm passionate about clean
+                  architecture, developer experience, and turning complex ideas
+                  into polished applications.
+                </p>
+                <p>
+                  When I'm not coding, you'll find me exploring open-source
+                  projects, writing tech blogs, or experimenting with new
+                  frameworks.
+                </p>
+              </div>
+
+              <div class="ainfo">
+                <div class="achip">
+                  <div class="lbl">Name</div>
+                  <div class="val">Mizanur Rahman</div>
+                </div>
+                <div class="achip">
+                  <div class="lbl">Location</div>
+                  <div class="val">Dhaka, Bangladesh</div>
+                </div>
+                <div class="achip">
+                  <div class="lbl">Availability</div>
+                  <div class="val">Open to work</div>
+                </div>
+                <div class="achip">
+                  <div class="lbl">Freelance</div>
+                  <div class="val">Available</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="gdiv"></div>
+
+      <!-- ═══ EXPERIENCE ═══ -->
+      <section id="experience">
+        <div style="width: 100%">
+          <p class="slabel reveal">// 02 — Experience</p>
+          <h2 class="stitle reveal">Work <span class="ac">History</span></h2>
+          <div class="sbar reveal"></div>
+          <div class="etabs reveal">
+            <button class="etab active" onclick="switchTab(this, 'work')">
+              Work Experience
+            </button>
+            <button class="etab" onclick="switchTab(this, 'freelance')">
+              Freelance
+            </button>
+          </div>
+          <div class="epanel active" id="panel-work">
+            <div class="timeline">
+              <div class="tli reveal">
+                <div class="tl-period">Nov 2025 — Present</div>
+                <div class="tl-role">Python Developer</div>
+                <div class="tl-co">
+                  <i class="fas fa-building" style="margin-right: 6px; opacity: 0.7"></i>Softvence Innovation · Dhaka,
+                  BD
+                </div>
+                <div class="tl-desc">
+                  Developing reliable and efficient backend systems using Python frameworks such as Django and FastAPI.
+                  Built secure and optimized APIs to enable seamless software communication, with deployment and
+                  management handled through Docker, CI/CD pipelines, and VPS servers.
+
+                </div>
+                <div class="tl-tags">
+                  <span class="tltag">Python</span><span class="tltag">Django</span><span
+                    class="tltag">FastAPI</span><span class="tltag">PostgreSQL</span><span class="tltag">Docker</span>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="epanel" id="panel-freelance">
+            <div class="timeline">
+              <div class="tli reveal">
+                <div class="tl-period">2020 — Present</div>
+                <div class="tl-role">Freelance Web Developer</div>
+                <div class="tl-co">
+                  <i class="fas fa-laptop-code" style="margin-right: 6px; opacity: 0.7"></i>Self-Employed · Remote
+                </div>
+                <div class="tl-desc">
+                  Delivered 20+ projects — e-commerce, SaaS dashboards, landing
+                  pages — for clients across USA, UK, Australia. 5-star rating
+                  on Upwork with 100% Job Success Score.
+                </div>
+                <div class="tl-tags">
+                  <span class="tltag">Next.js</span><span class="tltag">Tailwind</span><span
+                    class="tltag">Firebase</span><span class="tltag">Shopify</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="gdiv"></div>
+
+      <!-- ═══ SKILLS ═══ -->
+      <section id="skills">
+        <div style="width: 100%">
+          <p class="slabel reveal">// 03 — Skills</p>
+          <h2 class="stitle reveal">Tech <span class="ac">Stack</span></h2>
+          <div class="sbar reveal"></div>
+          <div class="scats stagger">
+            <div class="scat reveal">
+              <div class="scat-head">
+                <div class="scat-icon"><i class="fas fa-code"></i></div>
+                <div class="scat-name">Frontend</div>
+              </div>
+              <div class="schips">
+                <div class="schip">
+                  <i class="devicon-html5-plain"></i> HTML
+                </div>
+                <div class="schip"><i class="devicon-css3-plain"></i> CSS</div>
+                <div class="schip">
+                  <i class="devicon-javascript-plain"></i> JavaScript
+                </div>
+                <div class="schip">
+                  <i class="devicon-flutter-plain"></i> Flutter
+                </div>
+              </div>
+            </div>
+            <div class="scat reveal">
+              <div class="scat-head">
+                <div class="scat-icon"><i class="fas fa-server"></i></div>
+                <div class="scat-name">Backend</div>
+              </div>
+              <div class="schips">
+                <div class="schip">
+                  <i class="devicon-python-plain"></i> Python
+                </div>
+                <div class="schip">
+                  <i class="devicon-django-plain"></i> Django
+                </div>
+                <div class="schip">
+                  <i class="devicon-fastapi-plain"></i> FastAPI
+                </div>
+                <div class="schip"><i class="fas fa-plug"></i> REST APIs</div>
+              </div>
+            </div>
+            <div class="scat reveal">
+              <div class="scat-head">
+                <div class="scat-icon"><i class="fas fa-database"></i></div>
+                <div class="scat-name">Database & Cloud</div>
+              </div>
+              <div class="schips">
+                <div class="schip">
+                  <i class="devicon-postgresql-plain"></i> PostgreSQL
+                </div>
+                <div class="schip">
+                  <i class="devicon-redis-plain"></i> Redis
+                </div>
+                <div class="schip">
+                  <i class="devicon-amazonwebservices-plain-wordmark"></i> AWS
+                </div>
+                <div class="schip"><i class="fas fa-cogs"></i> CICD</div>
+
+                <div class="schip">
+                  <i class="devicon-docker-plain"></i> Docker
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="tech-title reveal">// Tools &amp; Technologies</p>
+          <div class="tech-grid stagger">
+            <div class="tcard reveal">
+              <i class="devicon-c-plain"></i><span>C Language</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-cplusplus-plain"></i><span>C++</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-python-plain"></i><span>Python</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-java-plain"></i><span>Java</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-dart-plain"></i><span>Dart</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-javascript-plain"></i><span>JavaScript</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-bash-plain"></i><span>Bash</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-yaml-plain"></i><span>YAML</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-docker-plain"></i><span>Docker</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-git-plain"></i><span>Git</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-linux-plain"></i><span>Linux</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-github-plain"></i><span>GitHub</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-postgresql-plain"></i><span>PostgreSQL</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-mysql-plain"></i><span>MySQL</span>
+            </div>
+            <div class="tcard reveal">
+              <i class="devicon-sqlite-plain"></i><span>SQLite</span>
+            </div>
+
+            <div class="tcard reveal">
+              <i class="devicon-redis-plain"></i><span>Redis</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="gdiv"></div>
+
+      <!-- ═══ PROJECTS ═══ -->
+      <section id="projects">
+        <div style="width: 100%">
+          <p class="slabel reveal">// 04 — Projects</p>
+          <h2 class="stitle reveal">Featured <span class="ac">Work</span></h2>
+          <div class="sbar reveal"></div>
+          <div class="proj-grid stagger">
+            <div class="pcard reveal">
+              <div class="pthumb">
+                <i class="fas fa-chart-line pthumb-icon"></i>
+                <div class="plinks">
+                  <a href="#" class="p-btn" title="GitHub Repo"><i class="fab fa-github"></i></a>
+                  <a href="#" class="p-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="pnum">01</div>
+              </div>
+              <div class="pbody">
+                <div class="pname">AnalyticsPro Dashboard</div>
+                <div class="pdesc">
+                  Real-time analytics platform with interactive charts, custom
+                  KPI tracking, and AI-powered insights for e-commerce
+                  businesses.
+                </div>
+                <div class="ptechs">
+                  <span class="ptag">Next.js</span><span class="ptag">Node.js</span><span
+                    class="ptag">PostgreSQL</span><span class="ptag">Redis</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard reveal">
+              <div class="pthumb" style="background: linear-gradient(135deg, #0a1410, #0b1810)">
+                <i class="fas fa-shopping-cart pthumb-icon"></i>
+                <div class="plinks">
+                  <a href="#" class="p-btn" title="GitHub Repo"><i class="fab fa-github"></i></a>
+                  <a href="#" class="p-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="pnum">02</div>
+              </div>
+              <div class="pbody">
+                <div class="pname">ShopFlow E-Commerce</div>
+                <div class="pdesc">
+                  Full-featured e-commerce with headless CMS, Stripe payments,
+                  inventory management, and seller analytics dashboard.
+                </div>
+                <div class="ptechs">
+                  <span class="ptag">React</span><span class="ptag">Django</span><span class="ptag">Stripe</span><span
+                    class="ptag">AWS S3</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard reveal">
+              <div class="pthumb">
+                <i class="fas fa-comments pthumb-icon"></i>
+                <div class="plinks">
+                  <a href="#" class="p-btn" title="GitHub Repo"><i class="fab fa-github"></i></a>
+                  <a href="#" class="p-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="pnum">03</div>
+              </div>
+              <div class="pbody">
+                <div class="pname">ChatSync Messenger</div>
+                <div class="pdesc">
+                  Real-time messaging with E2E encryption, file sharing, voice
+                  messages, supporting 10k+ concurrent users.
+                </div>
+                <div class="ptechs">
+                  <span class="ptag">Vue.js</span><span class="ptag">Socket.io</span><span
+                    class="ptag">MongoDB</span><span class="ptag">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard reveal">
+              <div class="pthumb">
+                <i class="fas fa-brain pthumb-icon"></i>
+                <div class="plinks">
+                  <a href="#" class="p-btn" title="GitHub Repo"><i class="fab fa-github"></i></a>
+                  <a href="#" class="p-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="pnum">04</div>
+              </div>
+              <div class="pbody">
+                <div class="pname">AI Content Studio</div>
+                <div class="pdesc">
+                  AI-powered content generation integrating GPT-4, image
+                  generation, SEO analysis, and one-click blog publishing.
+                </div>
+                <div class="ptechs">
+                  <span class="ptag">Next.js</span><span class="ptag">OpenAI</span><span class="ptag">Prisma</span><span
+                    class="ptag">Vercel</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard reveal">
+              <div class="pthumb">
+                <i class="fas fa-tasks pthumb-icon"></i>
+                <div class="plinks">
+                  <a href="#" class="p-btn" title="GitHub Repo"><i class="fab fa-github"></i></a>
+                  <a href="#" class="p-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="pnum">05</div>
+              </div>
+              <div class="pbody">
+                <div class="pname">DevFlow Task Manager</div>
+                <div class="pdesc">
+                  Kanban project management with Gantt charts, team
+                  collaboration, GitHub integration, and automated reporting.
+                </div>
+                <div class="ptechs">
+                  <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MySQL</span><span
+                    class="ptag">GitHub API</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard reveal">
+              <div class="pthumb">
+                <i class="fas fa-wallet pthumb-icon"></i>
+                <div class="plinks">
+                  <a href="#" class="p-btn" title="GitHub Repo"><i class="fab fa-github"></i></a>
+                  <a href="#" class="p-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="pnum">06</div>
+              </div>
+              <div class="pbody">
+                <div class="pname">FinTrack Budget App</div>
+                <div class="pdesc">
+                  Personal finance tracker with bank sync, expense
+                  categorization, investment monitoring, and AI spending
+                  insights.
+                </div>
+                <div class="ptechs">
+                  <span class="ptag">React Native</span><span class="ptag">Express</span><span class="ptag">Plaid
+                    API</span><span class="ptag">GCP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="gdiv"></div>
+
+      <!-- ═══ EDUCATION ═══ -->
+      <section id="education">
+        <div style="width: 100%">
+          <p class="slabel reveal">// 05 — Education</p>
+          <h2 class="stitle reveal">
+            Academic <span class="ac">Background</span>
+          </h2>
+          <div class="sbar reveal"></div>
+          <div class="edu-grid">
+            <div class="ecard reveal">
+              <div class="eicon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="edeg">B.Sc. in Computer Science</div>
+              <div class="escu">
+                BUET — Bangladesh University of Engineering
+              </div>
+              <div class="eperiod">2015 — 2019</div>
+              <div class="edesc">
+                Focused on Algorithms, Data Structures, and Distributed Systems.
+                Graduated with honors. Active member of the ACM student chapter.
+              </div>
+            </div>
+
+          </div>
+
+      </section>
+
+      <div class="gdiv"></div>
+
+      <!-- ═══ CONTACT ═══ -->
+      <section id="contact">
+        <div style="width: 100%">
+          <p class="slabel reveal">// 06 — Contact</p>
+          <h2 class="stitle reveal">Get In <span class="ac">Touch</span></h2>
+          <div class="sbar reveal"></div>
+          <div class="con-grid">
+            <div class="rl">
+              <p class="con-tagline">
+                Let's build something <span>amazing</span> together.
+              </p>
+              <p class="con-p">
+                Whether you have a project in mind, want to collaborate, or just
+                want to say hi — my inbox is always open. I'll respond within 24
+                hours.
+              </p>
+            </div>
+            <div class="con-form rr">
+              <div class="frow">
+                <div class="fg">
+                  <label>Your Name</label><input type="text" placeholder="John Doe" />
+                </div>
+                <div class="fg">
+                  <label>Email</label><input type="email" placeholder="john@example.com" />
+                </div>
+              </div>
+              <div class="fg">
+                <label>Subject</label><input type="text" placeholder="Project Inquiry" />
+              </div>
+              <div class="fg">
+                <label>Message</label><textarea placeholder="Tell me about your project..."></textarea>
+              </div>
+              <button class="btn-g" onclick="handleSend(this)" style="cursor: pointer; width: fit-content">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="fcopy">
+        Designed &amp; Built by <span>Mizanur Rahman</span> · © 2025
+      </div>
+      <div class="fsocs">
+        <a href="https://github.com/mizanurrahman" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/mizanurrahman" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/880XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/mizanurrahman" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        <a href="mailto:mizan@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      /* CURSOR */
+      const cur = document.getElementById("cursor"),
+        fol = document.getElementById("cursorF");
+      let mx = 0,
+        my = 0,
+        fx = 0,
+        fy = 0;
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+      });
+      (function anim() {
+        cur.style.transform = `translate(${mx - 4}px,${my - 4}px)`;
+        fx += (mx - fx) * 0.12;
+        fy += (my - fy) * 0.12;
+        fol.style.transform = `translate(${fx - 14}px,${fy - 14}px)`;
+        requestAnimationFrame(anim);
+      })();
+
+      /* NAVBAR */
+      const nav = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 30);
+        const sects = [
+          "hero",
+          "about",
+          "experience",
+          "skills",
+          "projects",
+          "education",
+          "contact",
+        ];
+        let cur2 = "hero";
+        sects.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 100) cur2 = id;
+        });
+        document
+          .querySelectorAll(".nav-link")
+          .forEach((l) =>
+            l.classList.toggle("active", l.getAttribute("href") === "#" + cur2),
+          );
+      });
+
+      function toggleMenu() {
+        document.getElementById("mobMenu").classList.toggle("open");
+      }
+      function closeMenu() {
+        document.getElementById("mobMenu").classList.remove("open");
+      }
+
+      /* TYPED */
+      const phrases = [
+        "Programmer.",
+        "Problem Solver.",
+        "Software Engineer.",
+        "Backend Developer.",
+        "Python Developer.",
+        "Flutter Developer.",
+        "Code Craftsman.",
+      ];
+      let pi = 0,
+        ci = 0,
+        del = false;
+      const typedEl = document.getElementById("typed");
+      function type() {
+        const p = phrases[pi];
+        if (!del) {
+          typedEl.textContent = p.slice(0, ++ci);
+          if (ci === p.length) {
+            del = true;
+            setTimeout(type, 1800);
+            return;
+          }
+        } else {
+          typedEl.textContent = p.slice(0, --ci);
+          if (ci === 0) {
+            del = false;
+            pi = (pi + 1) % phrases.length;
+          }
+        }
+        setTimeout(type, del ? 55 : 90);
+      }
+      setTimeout(type, 1000);
+
+      /* PROFILE PHOTO */
+      function loadPhoto(input) {
+        if (!input.files || !input.files[0]) return;
+        const r = new FileReader();
+        r.onload = (e) => {
+          const img = document.getElementById("profile-photo");
+          img.src = e.target.result;
+          img.classList.add("show");
+          document.getElementById("ph-placeholder").style.display = "none";
+        };
+        r.readAsDataURL(input.files[0]);
+      }
+
+      /* REVEAL */
+      const ro = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("vis");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal,.rl,.rr")
+        .forEach((el) => ro.observe(el));
+
+      /* TABS */
+      function switchTab(btn, id) {
+        document
+          .querySelectorAll(".etab")
+          .forEach((t) => t.classList.remove("active"));
+        document
+          .querySelectorAll(".epanel")
+          .forEach((p) => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById("panel-" + id).classList.add("active");
+      }
+
+      /* FORM */
+      function handleSend(btn) {
+        btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+        btn.style.background = "#fff";
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+          btn.style.background = "var(--g)";
+          btn.disabled = false;
+        }, 3000);
+      }
+    </script>
+  </body>
+
+</html>
