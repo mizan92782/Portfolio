@@ -122,6 +122,7 @@ pandas==2.1.4+dfsg
 parso==0.8.3
 patsy==0.5.6
 pexpect==4.9.0
+phonenumbers==9.0.26
 pillow==10.3.0
 pipx==1.4.3
 platformdirs==4.2.0
