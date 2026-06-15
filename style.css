@@ -1615,17 +1615,26 @@ footer {
   .edu-grid {
     grid-template-columns: 1fr;
   }
+
+  section {
+    padding: 80px 48px;
+  }
+
+  footer {
+    padding: 24px 48px;
+  }
 }
 
 @media (max-width: 768px) {
   section {
-    padding: 70px 24px;
+    padding: 60px 20px;
   }
 
   footer {
-    padding: 24px;
+    padding: 24px 20px;
     flex-direction: column;
     gap: 20px;
+    text-align: center;
   }
 
   .nav-links,
@@ -1637,11 +1646,94 @@ footer {
     display: flex;
   }
 
+  .navbar {
+    padding: 0 20px;
+  }
+
   .frow {
     grid-template-columns: 1fr;
   }
 
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+
+  .btn-g, .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ainfo {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scats {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .tli {
+    padding: 20px;
+  }
+
+  .stitle {
+    font-size: clamp(24px, 7vw, 36px);
+  }
+
+  .con-tagline {
+    font-size: 18px;
+  }
+
+  .hero-socials {
+    flex-wrap: wrap;
+  }
+
+  .fbadge {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 50px 16px;
+  }
+
   .navbar {
-    padding: 0 24px;
+    padding: 0 16px;
+  }
+
+  footer {
+    padding: 20px 16px;
+  }
+
+  .ainfo {
+    grid-template-columns: 1fr;
+  }
+
+  .etabs {
+    flex-direction: column;
+  }
+
+  .etab {
+    text-align: center;
+  }
+
+  .tcard {
+    padding: 14px 8px;
+  }
+
+  .pcard {
+    min-width: 0;
   }
 }
